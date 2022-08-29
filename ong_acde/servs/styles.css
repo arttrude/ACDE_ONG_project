@@ -1,0 +1,181 @@
+/* /////////////GENERAL FORMATATIONS//////////////// */
+*,
+::before,
+::after {
+	padding: 0;
+	margin: 0;
+
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+	--general-color: #cf4d43;
+	--initial-margin: clamp(6.8rem, 12%, 8rem);
+}
+
+body,
+html {
+	font-size: 2rem;
+	height: 100%;
+
+	font-family: 'DM Sans', sans-serif;
+	background-color: white;
+
+	scroll-behavior: smooth;
+}
+
+hr {
+	margin: 3rem 3rem 25rem 3rem;
+	height: 0.3rem;
+	border: none;
+	background-color: var(--general-color);
+}
+
+/* /////////////////NAV FORMATATIONS//////////////// */
+
+nav#nav-bar {
+	position: fixed;
+	top: 0;
+
+	padding: 4rem;
+
+	background-color: white;
+
+	width: 100%;
+	height: clamp(6.8rem, 12%, 8rem);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+}
+
+/* LINKS FORMATATION */
+#nav-bar a.nav-link {
+	color: black;
+	display: inline;
+	position: relative;
+
+	font-size: 1.6rem;
+	font-weight: bold;
+	text-decoration: none;
+
+	text-transform: uppercase;
+
+	transition: color 0.3s ease-in-out;
+
+	margin-inline: 4rem;
+}
+
+/* HOVER EFFECT */
+
+#nav-bar a.nav-link::before {
+	content: '';
+	transform: scaleX(0);
+	transition: transform 0.3s ease-in-out;
+
+	position: absolute;
+	top: 100%;
+
+	width: 100%;
+	height: 3px;
+
+	background-color: var(--general-color);
+}
+
+#nav-bar a.nav-link:hover {
+	color: var(--general-color);
+}
+
+#nav-bar a.nav-link:hover::before {
+	transform: scaleX(1);
+}
+
+header#header img#header-img {
+	height: 15rem;
+
+	padding-block: 6rem;
+
+	object-fit: contain;
+}
+nav img {
+	width: 10rem;
+}
+
+/* ////////////MAIN FORMATATION//////////////// */
+
+main {
+	margin-top: var(--initial-margin);
+	padding-bottom: 6rem;
+}
+
+main header {
+	margin: 0 auto;
+	text-align: center;
+	color: var(--general-color);
+	font-size: 3.5rem;
+}
+
+main img#capa {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	box-shadow: 2px 2px 10px black;
+	margin-bottom: 10rem;
+}
+/*
+
+
+/* //////////////////ABOUT SECTION//////////////// */
+
+.aboutSection {
+	margin-top: 10rem;
+}
+
+.aboutSection a {
+	color: rgb(0, 133, 155);
+}
+
+.aboutSection p {
+	margin-inline: 3rem;
+}
+
+.aboutSection h2 {
+	color: var(--general-color);
+	margin-left: 2.5rem;
+	margin-bottom: 3rem;
+	display: block;
+
+	font-size: 4rem;
+}
+
+.aboutSection img {
+	width: 95%;
+	margin: 5rem auto;
+	border-radius: 2rem;
+	height: 75vh;
+	object-fit: cover;
+
+	display: block;
+}
+
+.aboutSection#numeros {
+	display: grid;
+}
+
+/* //////////////FOOTER FORMATATION///////////////// */
+
+footer {
+	background-color: var(--general-color);
+
+	text-align: center;
+	padding: 3rem;
+}
+footer p {
+	display: inline;
+	color: white;
+	font-size: 2rem;
+	padding-inline: 1rem;
+}
