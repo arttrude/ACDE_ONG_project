@@ -165,6 +165,12 @@ main img#capa {
 	display: grid;
 }
 
+.aboutSection iframe {
+	margin:5rem auto;
+	text-align:center;
+	border:2px solid var(--general-color);
+}
+
 /* //////////////FOOTER FORMATATION///////////////// */
 
 footer {
